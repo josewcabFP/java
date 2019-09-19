@@ -1,4 +1,20 @@
-# JavaDoc
+## Compilar java por consola
+
+Para compilar un archivo con extensión _.java. necesitamos utilizar el siguiente comando:
+
+```bash
+javac miarchivo.java
+```
+Con este comando generaremos un archivo compilado _.class_ que podremos ejecutar en java sin necesidad de tener que especificar la extensión _.java_.
+
+```bash
+java miarchivo
+```
+
+
+
+
+## JavaDoc
 
 Para generar un java doc se utiliza el siguiente comando:
 
