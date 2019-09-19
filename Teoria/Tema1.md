@@ -11,9 +11,6 @@ Con este comando generaremos un archivo compilado _.class_ que podremos ejecutar
 java miarchivo
 ```
 
-
-
-
 ## JavaDoc
 
 Para generar un java doc se utiliza el siguiente comando:
@@ -29,5 +26,6 @@ Hay que recordar que debemos usar comentarios con la sintanxis:
  * Mis datos 
  * /
  ```
- El archivo generado sera un **html**.
+ El archivo generádo sera un **html**.
 > Cuando hacemos el comando javadoc, este genera una catidad grande de archivos por lo que sería buena idea meter el archivo a una carpeta antes. 
+
