@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ejercicio1",
+            "request": "launch",
+            "mainClass": "Ejercicio1",
+            "projectName": "Java_beed819b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Holamundo",
+            "request": "launch",
+            "mainClass": "Holamundo",
+            "projectName": "Java_beed819b"
+        }
+    ]
+}
