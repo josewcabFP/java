@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ejercicio8",
+            "request": "launch",
+            "mainClass": "ejercicio8",
+            "projectName": "Java_beed819b"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio1",
             "request": "launch",
             "mainClass": "Ejercicio1",

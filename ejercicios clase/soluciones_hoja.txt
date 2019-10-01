@@ -1,0 +1,15 @@
+false
+false 
+false 
+true
+true
+true? >>>
+true
+false 'x' = 120
+true '1' = 49
+true (anio)
+false
+pediatra
+con descuento 28.64
+true (%)
+false
