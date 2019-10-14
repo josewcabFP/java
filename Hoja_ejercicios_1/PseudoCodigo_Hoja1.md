@@ -175,7 +175,7 @@
 
 &emsp;_suma_ ENTERO  
 
-&emsp;_contrador_ ENTERO
+&emsp;_cont_ ENTERO
 
 **VARIABLES LOCALES**  
 
@@ -293,14 +293,37 @@
 
 `SUMADOR_2`
 
-**VARIABLE ENTRADA**  
+**VARIABLE ENTRADA**
+
+&emsp; num ENTERO
 
 **VARIABLES DE SALIDA** 
 
+
+
 **VARIABLES LOCALES**  
+
+&emsp; cont ENTERO  
+&emsp; suma ENTERO  
+&emsp; promedio DOUBLE
 
 **INICIO**  
 
+&emsp;cont = 1;  
+&emsp;suma = 0;
+
+&emsp;MIENTRAS ( cont <= 3 )&emsp;HACER  
+
+&emsp;&emsp;LEER num;  
+
+&emsp;&emsp;suma = suma + num;  
+&emsp;&emsp;cont = cont + 1;
+
+&emsp;FIN MIENTRAS
+
+&emsp;promedio = suma / cont;
+
+&emsp;MOSTRAR ("La suma es: " + suma + " y el promedio es: " + promedio);
 
 
 **FIN**
@@ -315,11 +338,33 @@
 
 **VARIABLE ENTRADA**  
 
+&emsp; importe DOUBLE
+
 **VARIABLES DE SALIDA**  
 
 **VARIABLES LOCALES**  
 
+&emsp; total DOUBLE
+
 **INICIO**  
+
+&emsp;LEER importe;  
+
+&emsp;SI ( importe >= 300 )&emsp;ENTONCES  
+
+&emsp;&emsp;total = importe * 0.4;  
+
+&emsp;SINO SI (importe >= 100)&emsp;ENTONCES  
+
+&emsp;&emsp;total = importe * 0.2;  
+
+&emsp;SINO  
+
+&emsp;&emsp;total = importe;  
+
+&emsp;FIN SI
+
+&emsp;MOSTRAR ( "El importe es: " + importe );
 
 
 
