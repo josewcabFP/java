@@ -2,7 +2,7 @@
 
 ## Ejercicios
 
-#### 1. Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos.
+### 1. Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos.
 
 ```CALCULA SUMA```
 
@@ -40,11 +40,14 @@
 
 &emsp;FIN SI
 
-**FIN**
+**FIN**  
 
----
+---  
+  
 
-#### 2. Solicitar un entero y determinar sí es múltiplo de 3 y además que se encuentre en el rango (100-200).
+</br></br></br></br></br>
+
+### 2. Solicitar un entero y determinar sí es múltiplo de 3 y además que se encuentre en el rango (100-200).
 
 ```MULTIPLO DE TRES```
 
@@ -74,7 +77,7 @@
 
 ---
 
-#### 3. Elaborar un algoritmo para leer la fecha de nacimiento de una persona y muestre su signo zodiacal.
+### 3. Elaborar un algoritmo para leer la fecha de nacimiento de una persona y muestre su signo zodiacal.
 
 ```HOROSCOPO```
 
@@ -90,7 +93,7 @@
 **INICIO**  
 
 &emsp;LEER _dia_;  
-&emsp;LEER _mes_;
+&emsp;LEER _mes_;</br></br>
 
 &emsp;SI (((dia >= 21 && dia <= 29) && (mes == 3)) || (dia >= 1 && dia <= 20) && (mes == 4)) ENTONCES  
 &emsp;&emsp;&emsp;MOSTRAR("Tu signo es Aries");  
@@ -133,7 +136,7 @@
 **FIN**
 
 ---
-#### 4. MOSTRAR LOS NÚMEROS DEL 1 AL 100 (CONTADOR)  
+### 4. MOSTRAR LOS NÚMEROS DEL 1 AL 100 (CONTADOR)  
 
 ```CONTADOR```
 
@@ -144,6 +147,7 @@
 &emsp; _numero_ ENTERO
 
 **VARIABLES LOCALES**  
+
 
 **INICIO**  
 
@@ -163,7 +167,7 @@
 
 
 ---
-#### 5. SUMAR LOS NÚMEROS DEL 1 AL 100 (ACUMULADOR)  
+### 5. SUMAR LOS NÚMEROS DEL 1 AL 100 (ACUMULADOR)  
 
 ```ACUMULADOR```
 
@@ -197,9 +201,11 @@
 
 **FIN**
 
+</br>
+
 ---
 
-#### 6. DAR EL PROMEDIO DE LOS NÚMEROS DEL 1 AL 100 (PROMEDIO)  
+### 6. DAR EL PROMEDIO DE LOS NÚMEROS DEL 1 AL 100 (PROMEDIO)  
 
 ```PROMEDIO```
 
@@ -237,7 +243,7 @@
 
 ---
 
-#### 7. CONTAR, SUMAR Y CALCULAR LOS NÚMEROS QUE NOS DAN POR TECLADO HASTA QUE EL NÚMERO SEA 0.
+### 7. CONTAR, SUMAR Y CALCULAR LOS NÚMEROS QUE NOS DAN POR TECLADO HASTA QUE EL NÚMERO SEA 0.
 
 `SUMADOR`
 
@@ -254,6 +260,8 @@
 &emsp;suma ENTERO
 
 &emsp;cont ENTERO
+
+</br>
 
 **INICIO**  
 
@@ -289,7 +297,7 @@
 
 ---
 
-#### 8. CONTAR, SUMAR Y CALCULAR EL PROMEDIO DE LOS NÚMEROS QUE NOS DAN POR TECLADO HASTA UN TOTAL DE 3 NÚMEROS.
+### 8. CONTAR, SUMAR Y CALCULAR EL PROMEDIO DE LOS NÚMEROS QUE NOS DAN POR TECLADO HASTA UN TOTAL DE 3 NÚMEROS.
 
 `SUMADOR_2`
 
@@ -312,6 +320,8 @@
 &emsp;cont = 1;  
 &emsp;suma = 0;
 
+</br>
+
 &emsp;MIENTRAS ( cont <= 3 )&emsp;HACER  
 
 &emsp;&emsp;LEER num;  
@@ -331,7 +341,7 @@
 
 ---
 
-#### 9. DADO EL IMPORTE DE LA COMPRA, CALCULAR EL IMPORTE TOTAL CON DESCUENTO. 
+### 9. DADO EL IMPORTE DE LA COMPRA, CALCULAR EL IMPORTE TOTAL CON DESCUENTO. 
 >Sabiendo que con una compra a partir de 100 euros te hacen un 20% de descuento, y a partir 300 euros un 40% de descuento.
 
 `IMPORTE`
@@ -351,15 +361,12 @@
 &emsp;LEER importe;  
 
 &emsp;SI ( importe >= 300 )&emsp;ENTONCES  
-
 &emsp;&emsp;total = importe * 0.4;  
 
 &emsp;SINO SI (importe >= 100)&emsp;ENTONCES  
-
 &emsp;&emsp;total = importe * 0.2;  
 
 &emsp;SINO  
-
 &emsp;&emsp;total = importe;  
 
 &emsp;FIN SI
@@ -372,25 +379,43 @@
 
 ---
 
-#### 10. CALCULAR EL SUMATORIO DE UN NÚMERO DADO (SUMAR TODOS LOS NÚMEROS DESDE ESE NÚMERO HASTA EL 1)
+### 10. CALCULAR EL SUMATORIO DE UN NÚMERO DADO (SUMAR TODOS LOS NÚMEROS DESDE ESE NÚMERO HASTA EL 1)
 
 `SUMADOR_3`
 
 **VARIABLE ENTRADA**  
 
+&emsp;limite ENTERO
+
 **VARIABLES DE SALIDA** 
 
 **VARIABLES LOCALES**  
 
+&emsp;sumatorio ENTERO  
+&emsp;contador ENTERO
+
 **INICIO**  
 
+&emsp;LEER limite; 
 
+&emsp;contador = 1;  
+&emsp;sumatorio = 0;
+
+&emsp;MIENTRAS ( contador <= limite) &emsp;HACER
+
+&emsp;&emsp;sumatorio = sumatorio + contador;
+
+&emsp;&emsp;contador = contador + 1;
+
+&emsp;FIN MIENTRAS
+
+&emsp;MOSTRAR (" El sumatorio es: " + sumatorio );
 
 **FIN**
 
 ---
 
- #### 11. SE DESEA ENCONTRAR DE MANERA INDEPENDIENTE LA SUMA DE LOS NÚMEROS PARES E IMPARES COMPRENDIDOS ENTRE EL 1 Y EL 100. 
+ ### 11. SE DESEA ENCONTRAR DE MANERA INDEPENDIENTE LA SUMA DE LOS NÚMEROS PARES E IMPARES COMPRENDIDOS ENTRE EL 1 Y EL 100. 
  
  >vamos a utilizar **función modulo** para saber si es par o impar.
 
@@ -410,7 +435,7 @@
 
  ---
 
- #### 12. DADOS TRES NUMEROS ENTEROS, INDICAR CUÁL DE LOS TRES ES MAYOR.
+ ### 12. DADOS TRES NUMEROS ENTEROS, INDICAR CUÁL DE LOS TRES ES MAYOR.
 
  `MAYOR`
 
@@ -428,7 +453,7 @@
 
  ---
 
- #### 13. CALCULAR EL FACTORIAL DE UN NÚMERO
+ ### 13. CALCULAR EL FACTORIAL DE UN NÚMERO
 
  `FACTORIAL`
 
@@ -464,7 +489,7 @@
 
  ---
 
- #### 15. DADAS LAS NOTA DE TEORÍA, PRÁCTICA Y LOS POSITIVOS, INCIAR CUÁL SERÁ LA NOTA FINAL
+ ### 15. DADAS LAS NOTA DE TEORÍA, PRÁCTICA Y LOS POSITIVOS, INCIAR CUÁL SERÁ LA NOTA FINAL
 
 >Sabiendo que, solo pueden aprobar los que tienen la teoría y la práctica aprobada.
 Si la nota media está aprobada y alguna de las partes suspensa la nota final será un 4.
@@ -487,7 +512,7 @@ Una vez tengas la nota final, hay que subir un 1% la nota de los positivos.
 
 ---
 
-#### 16. ALGORITMO ADIVINA UN NÚMERO, SE SOLICITARÁ UN NÚMERO Y SE IRÁN DANDO PISTAS DE SI ES MAYOR O MENOR HASTA ENCONTRARLOEL NÚMERO DE INTENTOS SERÁ INFINITO.
+### 16. ALGORITMO ADIVINA UN NÚMERO, SE SOLICITARÁ UN NÚMERO Y SE IRÁN DANDO PISTAS DE SI ES MAYOR O MENOR HASTA ENCONTRARLOEL NÚMERO DE INTENTOS SERÁ INFINITO.
 
 `ADVINA`
 
@@ -505,7 +530,7 @@ Una vez tengas la nota final, hay que subir un 1% la nota de los positivos.
 
 ---
 
-#### 17. LÍMITAR EL NÚMERO DE INTENTOS AL ALGORITMO ANTERIOR.
+### 17. LÍMITAR EL NÚMERO DE INTENTOS AL ALGORITMO ANTERIOR.
 
 `ADIVINA_2`
 
@@ -523,7 +548,7 @@ Una vez tengas la nota final, hay que subir un 1% la nota de los positivos.
 
 ---
 
-#### 18. DADAS DOS FECHAS DE NACIMIENTO: A Y B en AÑO/MES/DÍA INDICAR QUIÉN ES MAYOR
+### 18. DADAS DOS FECHAS DE NACIMIENTO: A Y B en AÑO/MES/DÍA INDICAR QUIÉN ES MAYOR
 
 `FECH_MAYOR`
 
