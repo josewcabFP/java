@@ -361,10 +361,10 @@
 &emsp;LEER importe;  
 
 &emsp;SI ( importe >= 300 )&emsp;ENTONCES  
-&emsp;&emsp;total = importe * 0.4;  
+&emsp;&emsp;total = importe * 0.6;  
 
 &emsp;SINO SI (importe >= 100)&emsp;ENTONCES  
-&emsp;&emsp;total = importe * 0.2;  
+&emsp;&emsp;total = importe * 0.8;  
 
 &emsp;SINO  
 &emsp;&emsp;total = importe;  
@@ -415,13 +415,13 @@
 
 ---
 
- ### 11. SE DESEA ENCONTRAR DE MANERA INDEPENDIENTE LA SUMA DE LOS NÚMEROS PARES E IMPARES COMPRENDIDOS ENTRE EL 1 Y EL 100. 
+### 11. SE DESEA ENCONTRAR DE MANERA INDEPENDIENTE LA SUMA DE LOS NÚMEROS PARES E IMPARES COMPRENDIDOS ENTRE EL 1 Y EL 100. 
  
  >vamos a utilizar **función modulo** para saber si es par o impar.
 
  `SUMA_PARES`
 
- **VARIABLE ENTRADA**  
+**VARIABLE ENTRADA**  
 
 **VARIABLES DE SALIDA** 
 
@@ -435,7 +435,7 @@
 
  ---
 
- ### 12. DADOS TRES NUMEROS ENTEROS, INDICAR CUÁL DE LOS TRES ES MAYOR.
+### 12. DADOS TRES NUMEROS ENTEROS, INDICAR CUÁL DE LOS TRES ES MAYOR.
 
  `MAYOR`
 
@@ -453,7 +453,7 @@
 
  ---
 
- ### 13. CALCULAR EL FACTORIAL DE UN NÚMERO
+### 13. CALCULAR EL FACTORIAL DE UN NÚMERO
 
  `FACTORIAL`
 
@@ -471,7 +471,8 @@
 
  ---
 
- #### 14. DADAS DOS FECHAS DE NACIMIENTO INDICAR CUANTOS AÑOS MESES Y DÍAS DE DIFERENCIA TIENEN.
+
+### 14. DADAS DOS FECHAS DE NACIMIENTO INDICAR CUANTOS AÑOS MESES Y DÍAS DE DIFERENCIA TIENEN.
 
  `NACIMIENTO`
 
@@ -489,7 +490,7 @@
 
  ---
 
- ### 15. DADAS LAS NOTA DE TEORÍA, PRÁCTICA Y LOS POSITIVOS, INCIAR CUÁL SERÁ LA NOTA FINAL
+### 15. DADAS LAS NOTA DE TEORÍA, PRÁCTICA Y LOS POSITIVOS, INCIAR CUÁL SERÁ LA NOTA FINAL
 
 >Sabiendo que, solo pueden aprobar los que tienen la teoría y la práctica aprobada.
 Si la nota media está aprobada y alguna de las partes suspensa la nota final será un 4.
