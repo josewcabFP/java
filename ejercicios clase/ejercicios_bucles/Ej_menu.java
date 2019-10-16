@@ -14,17 +14,25 @@ public class Ej_menu {
                                 "0. Salir");
             opc = sc.nextInt();
 
-            if (!encontrado){
+            if (opc == 0){
+                encontrado = true;
+            }
+
+            else {
+              if (!encontrado){
                 if (opc == 1){
-                    System.out.println("HOLA!");
+                    System.out.println("HOLA!\n");
                 }
                 else if (opc == 2){
-                    System.out.println("Has sumado!");
+                    System.out.println("Has sumado!\n");
                 }
                 else{
-                    System.out.println("Opción no valida!");
+                    System.out.println("Opción no valida!\n");
                 }
+                }  
             }
+
+            
             
         }while (!encontrado);
     }

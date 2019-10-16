@@ -27,5 +27,13 @@ Hay que recordar que debemos usar comentarios con la sintanxis:
  * /
  ```
  El archivo generádo sera un **html**.
-> Cuando hacemos el comando javadoc, este genera una catidad grande de archivos por lo que sería buena idea meter el archivo a una carpeta antes. 
+> Cuando hacemos el comando javadoc, este genera una catidad grande de archivos por lo que sería buena idea meter el archivo a una carpeta antes.
+
+
+## 14/10
+
+- La división de dos **eneteros** siempre da un entero, incluso aunque la división sea inexacta.
+
+- la asignación de la divisón de dos enteros asigandos a una variable de tipo **double** no afecta al contenido, unicamente se redimencionará al tipo de variable, en este caso a un double.
+
 
