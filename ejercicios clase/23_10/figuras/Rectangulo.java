@@ -1,28 +1,26 @@
 /**
- *  Enunciado: Rectángulo
-    Propiedades:
-
-    int ancho
-    int alto
-    String nombre
-
-    Métodos:
-    constructor (ancho, alto, nombre)
-    constructor() //crea por defecto un rectángulo de tamaño 5,7 y nombre RECTÁNGULO
-    int getAncho()
-    int getAlto()
-    int perimetro()
-    int area()
-    int incrementaAncho() //Incrementa en una unidad el ancho del rectángulo y me
-    devuelve el ancho actual.
-    int incrementaAlto() //Incrementa en una unidad el alto del rectángulo y me devuelve
-    el alto actual
-    String getNombre() //Me devuelve el nombre del rectángulo.
-    boolean esCuadrado() //devuelve verdadero o falso si se trata de un cuadrado.
- * 
- * 
- *  @author Jose Cabrera Rojas
- */
+*  Enunciado: Rectángulo
+*   Propiedades:
+*   int ancho
+*   int alto
+*   String nombre
+*   Métodos:
+*   constructor (ancho, alto, nombre)
+*   constructor() //crea por defecto un rectángulo de tamaño 5,7 y nombre RECTÁNGULO
+*   int getAncho()
+*   int getAlto()
+*   int perimetro()
+*   int area()
+*   int incrementaAncho() //Incrementa en una unidad el ancho del rectángulo y me
+*   devuelve el ancho actual.
+*   int incrementaAlto() //Incrementa en una unidad el alto del rectángulo y me devuelve
+*   el alto actual
+*   String getNombre() //Me devuelve el nombre del rectángulo.
+*   boolean esCuadrado() //devuelve verdadero o falso si se trata de un cuadrado.
+* 
+* 
+*  @author Jose Cabrera Rojas
+*/
 
 package figuras;
 
