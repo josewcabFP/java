@@ -25,11 +25,12 @@ public class Test{
         valores = entrada.split(" ");
         Rectangulo rect1 = new Rectangulo(Integer.parseInt(valores[2]), Integer.parseInt(valores[1]), valores[0]);
 
-
         System.out.print("Introduce los valores (nombre, alto y ancho) separados por espacios para el segundo rectangulo: ");
         entrada = sc.nextLine();
         valores = entrada.split(" ");
         Rectangulo rect2 = new Rectangulo(Integer.parseInt(valores[2]), Integer.parseInt(valores[1]), valores[0]);
+
+        sc.close();
 
         if (rect1.area() > rect2.area()) {
         	System.out.println("El rectangulo " + rect1.getNombre() + " tiene un área mayor al rectangulo " + rect2.getNombre());
@@ -54,6 +55,15 @@ public class Test{
         else {
         	System.out.println("Ninguno de los rectangulos es en realidad un cuadrado.");
         }
+
+        System.out.println("\nAlto = " + rect1.getAlto() + " | " + "Ancho = " + rect1.getAncho() + "\n" );
+
+        rect1.pintaPerimetro('+');
+
+        System.out.println("Alto = " + rect2.getAlto() + " | " + "Ancho = " + rect2.getAncho() + "\n" );
+
+        rect2. pintaRelleno('+');
+        
         
         
      }

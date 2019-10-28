@@ -42,9 +42,7 @@ public class Rectangulo{
     }
 
     public Rectangulo(){
-        this.ancho = 5;
-        this.alto = 7;
-        this.nombre = "RECTANGULO";
+       new Rectangulo(5,7, "RECTANGULO");
     }
 
     public int getAncho(){
@@ -79,5 +77,30 @@ public class Rectangulo{
 
     public boolean esCuadrado(){
         return (this.ancho == this.alto);
+    }
+
+    public void pintaPerimetro(char c){
+        for (int fil = 0; fil < this.getAlto(); fil++){
+            for(int col = 0; col < this.getAncho(); col++){
+                if (col == 0 || col == this.getAncho() - 1 || fil == 0 || fil == this.getAlto() - 1){
+                    System.out.print(" " + c + " ");
+                }
+                else{
+
+                    System.out.print("   ");
+                }
+            }
+            System.out.println("\b");
+        }
+        System.out.println("\n");
+    }
+    public void pintaRelleno(char c){
+        for (int fil = 0; fil < this.getAlto(); fil++){
+            for(int col = 0; col < this.getAncho(); col++){
+                System.out.print(" " + c + " ");
+            }
+            System.out.println("\b");
+        }
+        System.out.println("\n");
     }
 }
