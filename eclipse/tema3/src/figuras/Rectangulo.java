@@ -29,7 +29,7 @@ public class Rectangulo{
 
     public int ancho;
     public int alto;
-    String nombre;
+    public String nombre;
 
     //METODOS
 
@@ -90,7 +90,7 @@ public class Rectangulo{
                     System.out.print("   ");
                 }
             }
-            System.out.println("\b");
+            System.out.println("");
         }
         System.out.println("\n");
     }
@@ -99,7 +99,7 @@ public class Rectangulo{
             for(int col = 0; col < this.getAncho(); col++){
                 System.out.print(" " + c + " ");
             }
-            System.out.println("\b");
+            System.out.println("");
         }
         System.out.println("\n");
     }

@@ -58,11 +58,11 @@ public class Test{
 
         System.out.println("\nAlto = " + rect1.getAlto() + " | " + "Ancho = " + rect1.getAncho() + "\n" );
 
-        rect1.pintaPerimetro('+');
+        rect1.pintaPerimetro('p');
 
         System.out.println("Alto = " + rect2.getAlto() + " | " + "Ancho = " + rect2.getAncho() + "\n" );
 
-        rect2. pintaRelleno('+');
+        rect2. pintaRelleno('<');
         
         
         
