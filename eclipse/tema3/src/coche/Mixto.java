@@ -1,12 +1,18 @@
+/**
+ * 
+ * @author Jose Cabrera Rojas
+ */
+
 package coche;
 
 public class Mixto extends Coche {
 	
+	// ATRIBUTOS
+	
 	private int capacidad;
 	private int carga;
 	
-
-
+	// CONSTRUCTORES
 	
 	public Mixto() {
 		super("rojo");
@@ -19,6 +25,8 @@ public class Mixto extends Coche {
 		this.capacidad = _capacidad;
 		this.carga = 0;
 	}
+	
+	// MÉTODOS
 	
 	public boolean aumentaCarga(int _carga) {
 		boolean flag = false;
@@ -42,6 +50,8 @@ public class Mixto extends Coche {
 		
 		return flag;
 	}
+	
+	// GETTERS Y SETTERS
 
 	public int getCapacidad() {
 		return capacidad;
