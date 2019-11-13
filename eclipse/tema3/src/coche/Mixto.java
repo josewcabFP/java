@@ -15,7 +15,7 @@ public class Mixto extends Coche {
 	// CONSTRUCTORES
 	
 	public Mixto() {
-		super("rojo");
+		super();
 		this.capacidad = 100;
 		this.carga = 0;
 	}
@@ -68,6 +68,10 @@ public class Mixto extends Coche {
 	public void setCarga(int carga) {
 		this.carga = carga;
 	}
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + ", carga => " + this.getCarga() + ", capacidad => " + this.getCapacidad();
+	}
 	
 }

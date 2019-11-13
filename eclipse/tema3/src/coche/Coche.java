@@ -105,5 +105,11 @@ public class Coche {
 	public int getMAXIMO() {
 		return MAXIMO;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Color => " + this.getColor() + ", velocidad => " + this.getVelocidad();
+	}
 		
 }

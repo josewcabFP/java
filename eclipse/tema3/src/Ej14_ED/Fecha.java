@@ -23,32 +23,18 @@ public class Fecha {
 		if (this.mes < _otraFecha.getMes()) {
 			mesDif = 12 - mesDif;
 			anyoDif = anyoDif - 1;
+			
+			if (this.dia < _otraFecha.getDia()) {
+				diasDif = this.diasMes(this.mes - 1) - diasDif;
+				mesDif--;
+			}
 		}
 		
-		if (this.dia < _otraFecha.getDia()) {
+		else if (this.dia < _otraFecha.getDia()) {
 			diasDif = this.diasMes(_otraFecha.getMes()) - diasDif;
 			mesDif = mesDif - 1;
 		}
 		
-		
-		
-		/*
-		 * if (this.anyo >= _otraFecha.getAnyo()){
-		 * 
-		 * if (this.mes >= _otraFecha.getMes()) {
-		 * 
-		 * mesDif = this.mes - _otraFecha.getMes();
-		 * 
-		 * if (this.dia >= _otraFecha.getDia()) { diasDif = this.dia -
-		 * _otraFecha.getDia(); } else { //dia diasDif =
-		 * this.diasMes(_otraFecha.getMes()) - Math.abs(this.dia - _otraFecha.getDia());
-		 * mesDif = mesDif - 1; }
-		 * 
-		 * } else { //mes mesDif = 12 - Math.abs(this.mes - _otraFecha.getMes());
-		 * 
-		 * if (this.mes >) } anyoDif = this.anyo - _otraFecha.getAnyo(); } else { //año
-		 * }
-		 */
 		
 		System.out.println("La diferencia es de " + anyoDif + " años, " + mesDif + " meses y " + diasDif + " dias.");
 	}

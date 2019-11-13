@@ -1,4 +1,4 @@
-package coche;
+package coche_felix;
 
 public class TestCoche {
 
@@ -17,9 +17,8 @@ public class TestCoche {
 		
 		((Mixto) arrayCoches[2]).aumentaCarga(10);
 		
-		//System.out.println("La velocidad del mixto es: " + arrayCoches[2].getVelocidad() + " y la carga es: " + ((Mixto)arrayCoches[2]).getCarga());
+		System.out.println("La velocidad del mixto es: " + arrayCoches[2].getVelocidad() + " y la carga es: " + ((Mixto)arrayCoches[2]).getCarga());
 		
-		System.out.println(arrayCoches[2]);
 	}
 
 }
