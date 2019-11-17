@@ -27,40 +27,45 @@
 
 package Chips;
 
-public class Circuito extends Chip{
-	
+import java.util.Arrays;
+
+public class Circuito extends Chip {
+
 	private int entradas;
 	private double voltaje;
-	private String [] conexiones;
+	private String[] conexiones;
 	private boolean conectado;
-	
 
-	public Circuito(String _modelo, int _conexiones, int _entradas, double _voltaje) {
-		super(_modelo, _conexiones);
+	public Circuito(String _modelo, int _entradas, double _voltaje) {
+		super(_modelo, 10);
 		this.entradas = _entradas;
 		this.voltaje = _voltaje;
 		this.conectado = false;
+		this.conexiones = new String [10];
 	}
-	
-	
+
 	public void conectarOtro(Circuito _otroCircuito) {
-				
-		_otroCircuito.addConexion(this.getId());
-		_otroCircuito.setConectado(true);
+
+		if (this.conexiones.length < this.entradas) {
 			
-		this.conexiones[this.conexiones.length] = _otroCircuito.getId();
-		this.conectado = true;
-			
-	
-		
+			this.conexiones[0] = "hola";
+			System.out.println(this.conexiones[0]);
+
+			_otroCircuito.addConexion(this.getModelo());
+			_otroCircuito.setConectado(true);
+
+			this.conexiones[this.conexiones.length] = _otroCircuito.getModelo();
+			this.conectado = true;
+
+		}
+
 	}
-	
-	public void addConexion(String _id) {
-		
-		this.conexiones[this.conexiones.length] = _id;
-		
+
+	public void addConexion(String _modelo) {
+
+		this.conexiones[this.conexiones.length] = _modelo;
+
 	}
-	
 
 	public int getEntradas() {
 		return entradas;
@@ -70,22 +75,22 @@ public class Circuito extends Chip{
 		return voltaje;
 	}
 
-
 	public boolean isConectado() {
 		return conectado;
 	}
 
-
 	public void setConectado(boolean conectado) {
 		this.conectado = conectado;
 	}
-	
-	
 
 	public void setConexiones(String[] conexiones) {
 		this.conexiones = conexiones;
 	}
-	
+
+	@Override
+	public String toString() {
+		return " El circuito modelo " + this.getModelo() + " tiene un volatje de entrada de " + voltaje + " V.";
+	}
 	
 	
 

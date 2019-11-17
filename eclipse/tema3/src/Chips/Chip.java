@@ -23,11 +23,13 @@ package Chips;
 public class Chip {
 	private String Modelo;
 	private int patillas;
-	private String id;
+
 
 	public Chip(String _modelo, int _patillas) {
 		this.Modelo = _modelo;
 		this.patillas = _patillas;
+
+		
 	}
 
 	public String getModelo() {
@@ -38,8 +40,12 @@ public class Chip {
 		return patillas;
 	}
 
-	public String getId() {
-		return id;
+
+	@Override
+	public String toString() {
+		return "El chip modelo = " + Modelo + " tiene "+ patillas + "patillas.";
 	}
+	
+	
 
 }

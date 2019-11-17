@@ -49,4 +49,14 @@ public class Tablero {
 	public void setElemento(int _x, int _y, char _valor) {
 		this.tablero[_x][_y].setValor(_valor);
 	}
+
+	public int getFilas() {
+		return filas;
+	}
+
+	public int getColumnas() {
+		return columnas;
+	}
+	
+	
 }
