@@ -7,10 +7,10 @@ public class Juego {
 	private int score1;
 	private int score2;
 
-	public Juego(String _jug1, String _jug2) {
+	public Juego() {
 		this.tableroJuego = new Tablero();
-		this.jugador1 = _jug1;
-		this.jugador2 = _jug2;
+		this.jugador1 = "";
+		this.jugador2 = "";
 		this.score1 = 0;
 		this.score2 = 0;
 	}
@@ -20,7 +20,7 @@ public class Juego {
 		boolean jugadaEfectuada = false;
 
 		if (_x < this.getTableroJuego().getFilas() && _x >= 0 && _y < this.getTableroJuego().getColumnas() && _y >= 0) {
-
+			
 			if (this.tableroJuego.getElemento(_x, _y) == ' ') {
 				if (_jug == this.jugador1) {
 					this.tableroJuego.setElemento(_x, _y, 'X');
@@ -44,7 +44,7 @@ public class Juego {
 
 		// Recorre en array y determina si hay un tres en raya,
 
-		for (int i = 0; i < this.getTableroJuego().getFilas(); i++) {
+		
 
 			for (int j = 0; j < this.getTableroJuego().getColumnas(); j++) {
 
@@ -64,7 +64,7 @@ public class Juego {
 				}
 
 			}
-		}
+		
 
 		// diagonales
 
