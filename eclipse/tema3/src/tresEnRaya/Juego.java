@@ -1,5 +1,15 @@
 package tresEnRaya;
 
+/**
+ * Clase que representa el juego tres en raya. Contiene como atributo principal un 
+ * objeto de la clase {@link tresEnRaya.Tablero Tablero} de 3 x 3, ademas de los nombres y los puntajes de cada jugador.</br>
+ * 
+ * Esta clase posee tambien métodos para el manejo de cada interación con el tablero.
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
+
 public class Juego {
 	private Tablero tableroJuego;
 	private String jugador1;
@@ -7,6 +17,11 @@ public class Juego {
 	private int score1;
 	private int score2;
 
+	/**
+	 * No recibe parametros. Inicializa el atributo {@link tresEnRaya.Tablero tablero} creando un nuevo
+	 * objeto de esa clase y además inicializa los demas atributos para su posterior uso. 
+	 */
+	
 	public Juego() {
 		this.tableroJuego = new Tablero();
 		this.jugador1 = "";
@@ -14,6 +29,17 @@ public class Juego {
 		this.score1 = 0;
 		this.score2 = 0;
 	}
+	
+	/**
+	 * Método que introduce en una casilla del tablero una marca (X / O) en la coordenada dada, que 
+	 * depenederá, del jugador que este jugando en ese momento. Solo se podrá introducir una marca 
+	 * si la casilla esta vacia y si la coordenada no exede el tamaño del tablero.
+	 * 
+	 * @param _x Número de fila.
+	 * @param _y Número de columna
+	 * @param _jug Nombre del jugador
+	 * @return Devuelve true si se ha conseguido introducir el valor para dicha casilla.
+	 */
 
 	public boolean marcarSimbolo(int _x, int _y, String _jug) {
 
@@ -36,15 +62,18 @@ public class Juego {
 
 		return jugadaEfectuada;
 	}
+	
+	/**
+	 * Método que determina si se ha conseguido un <em>tres en raya</em>. Este método comprueba si
+	 * el tablero posee <strong>tres caracteres iguales en linea</strong> lo que significa que
+	 * hay un ganador y que el juego ha terminado.
+	 * @return Devuelve <strong>true</strong> si el juego ha terminado.
+	 */
 
 
-	public boolean juegoTerminado() { // determina si el juego ha terminado
+	public boolean juegoTerminado() { 
 
 		boolean fin = false;
-
-		// Recorre en array y determina si hay un tres en raya,
-
-		
 
 			for (int j = 0; j < this.getTableroJuego().getColumnas(); j++) {
 
@@ -78,14 +107,21 @@ public class Juego {
 
 		return fin;
 	}
+	
+	/**
+	 * Método que determina si <em>todas</em> las casillas estan ocupadas.
+	 * @return Devolvera <strong>true</strong> si todas las casillas estan ocupadas.
+	 */
 
 	public boolean casillasLLenas() {
 		boolean lleno = false;
 		int contadorCasillas = 0;
+		
+		// Contaremos casillas ocupadas y si la suma da 9 es por que todas estan llenas.
 
 		for (int i = 0; i < this.getTableroJuego().getColumnas(); i++) {
 			for (int j = 0; j < this.getTableroJuego().getFilas(); j++) {
-				if (this.getValor(i, j) != ' ') {
+				if (!this.estaVacio(i, j)) {
 					contadorCasillas++;
 
 				}
@@ -98,6 +134,14 @@ public class Juego {
 
 		return lleno;
 	}
+	
+	/**
+	 * Método que determina si la posición dada por coordenadas esta vacia.
+	 * @param _x Número de fila.
+	 * @param _y Número de columna.
+	 * 
+	 * @return Devolvera <strong>true</strong> si la casilla esta vacia.
+	 */
 
 	private boolean estaVacio(int _x, int _y) {
 		boolean vacio = false;
@@ -107,6 +151,11 @@ public class Juego {
 
 		return vacio;
 	}
+	
+	/**
+	 * Método que aumenta el puntaje del jugador introducido.
+	 * @param _jugador Nombre de jugador al cual se aumentara su puntaje.
+	 */
 	
 	public void aumentaScore(String _jugador) {
 		if (_jugador == this.jugador1) {
