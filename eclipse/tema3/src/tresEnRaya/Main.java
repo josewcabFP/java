@@ -4,7 +4,6 @@ package tresEnRaya;
  * Clase principal que invoca el juego con su método main.
  * 
  * @author Jose Cabrera Rojas
- *
  */
 
 public class Main {
