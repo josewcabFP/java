@@ -37,6 +37,8 @@ public class Main {
 				
 			}
 		}while(opc != 2);
+		
+		sc.close();
 
 	}
 
