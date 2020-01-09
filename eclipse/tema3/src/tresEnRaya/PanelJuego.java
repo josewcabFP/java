@@ -101,6 +101,8 @@ public class PanelJuego {
 
 		nombre[1] = scan.nextLine();
 		this.juego.setJugador2(nombre[1]);
+		System.out.println(" ");
+		
 
 		// si cierro el scanner me da problemas con los demas scanners no se por que
 		
@@ -169,6 +171,7 @@ public class PanelJuego {
 			opc = this.menuJuego();
 			if (opc == 1) {
 				this.solicitaNombres();
+				this.pintarJuego();
 				this.jugar();
 			}
 		}

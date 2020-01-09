@@ -1,7 +1,7 @@
 package ahorcado;
 
 /**
- * La clase juego representa a un juego de ahorcado completo, veamos como esta compuesta:
+ * 
  * 
  * @author Jose Cabrera Rojas
  * 
@@ -19,7 +19,7 @@ public class Juego {
 	public Juego() {
 		
 		this.dictionary = new Dictionary();
-		this.panelPalabra = new Panel(this.dictionary.getPalabra().length(), this.dictionary.getPalabra());
+		this.panelPalabra = new Panel(this.dictionary.getPalabra());
 		this.panel = new Panel(this.panelPalabra.getSize());
 		this.intentos = 0;  //!!!
 		this.grafica = "";

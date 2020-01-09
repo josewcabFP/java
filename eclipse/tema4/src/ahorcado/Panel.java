@@ -1,8 +1,21 @@
 package ahorcado;
 
+/**
+ * Clase que representa el panel de juego que el usuario visualizará, ademas contiene
+ * varios métodos de representación y de comprobación.
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
+
 public class Panel {
 	
 	private Casilla [] panel;
+	
+	/**
+	 * Inicializa el panel especificando el tamaño. 
+	 * @param _tam Tamaño requerido para el panel.
+	 */
 	
 	public Panel(int _tam){  // Constructor para panel vacio
 		this.panel = new Casilla[_tam];
@@ -11,8 +24,14 @@ public class Panel {
 		}
 	}
 	
-	public Panel(int _tam, String _palabra) { //Constructor para panel de palabra buscada
-		this.panel = new Casilla[_tam];
+	/**
+	 * Inicializa el panel especificando el String con la palabra a buscar.
+	 * 
+	 * @param _palabra
+	 */
+	
+	public Panel(String _palabra) { //Constructor para panel de palabra buscada
+		this.panel = new Casilla[_palabra.length()];
 		for (int i = 0; i < panel.length; i++) {
 			panel[i] = new Casilla(_palabra.charAt(i));
 		}
@@ -80,11 +99,6 @@ public class Panel {
 	public Casilla[] getCasillas() {
 		return this.panel;
 	}
-	
-	public static void main(String [] args) {
-		Panel pan = new Panel(4, "casa");
-		
-		System.out.println(pan.pintarPanel());
-	}
+
 	
 }

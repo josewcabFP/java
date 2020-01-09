@@ -1,5 +1,13 @@
 package ahorcado;
 
+/**
+ * Enumerado que contiene las representaciones gráficas de las diferentes fases del juego,
+ * que dependeran del numero de turnos restante.
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
+
 public enum Grafica {
 	
 	INTENTO0(	"\n________\n"
@@ -48,6 +56,7 @@ public enum Grafica {
 	
 	private String graf;
 	private int numIntentos;
+
 	
 	private Grafica(String _graf, int _numIntentos) {
 		this.graf = _graf;
