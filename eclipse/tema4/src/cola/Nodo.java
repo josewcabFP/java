@@ -19,4 +19,7 @@ public class Nodo {
 		return this.siguiente; 
 	}
 
+	public Integer getValor() {
+		return this.valor;
+	}
 }
