@@ -1,4 +1,4 @@
-package cola;
+package pilaConNodos;
 /**
  * boolean isEmpety()
  * void add(elemento) añade al final

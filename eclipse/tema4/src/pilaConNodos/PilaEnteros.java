@@ -1,10 +1,30 @@
-package cola;
+package pilaConNodos;
 
-public class Pila {
+/**
+ * Crea la clase PilaEnteros
+ * 
+ * propiedades:
+ * 	cima: Nodo
+ * 
+ * Métodos:
+ * Constructor que inicialice la cima a null.
+ * 	boolean push(Integer i)//devuelve siempre true
+ * 	Integer pop(),
+ * 	Integer top(),
+ * 	boolean isEmpty(),
+ * 	boolean isFull() //devuelve siempre false, porque nuestra pila es infinita, no tiene tope.
+
+
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
+
+public class PilaEnteros {
 	
 	private Nodo cima;
 	
-	public Pila() {
+	public PilaEnteros() {
 		this.cima = null;
 	}
 	
@@ -38,9 +58,13 @@ public class Pila {
 		return n;
 	}
 	
+	public boolean isFull() {
+		return false;
+	}
+	
 	public static void main (String [] args) {
 		
-		Pila pila = new Pila();
+		PilaEnteros pila = new PilaEnteros();
 		
 		pila.push(1);
 		pila.push(2);

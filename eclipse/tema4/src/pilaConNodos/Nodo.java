@@ -1,4 +1,19 @@
-package cola;
+package pilaConNodos;
+
+/**
+ * Enunciado: Crea la clase Nodo 
+ * 	
+ * Propiedades:valor: Integer 
+ * 		siguiente :Nodo
+ * 
+ * Métodos
+ * 	Constructor, que recibe el valor.
+ * 	get/set de siguiente
+ * 	get de valor.
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
 
 public class Nodo {
 	
