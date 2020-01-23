@@ -33,7 +33,7 @@ public class Cesta {
 		}
 		else {
 			p = this.cima.getProducto();
-			this.cima = this.cima.getSiguiente();
+			this.cima = this.cima.getSiguiente();  // OJO
 		}
 		
 		return p;

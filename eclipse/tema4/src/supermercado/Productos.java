@@ -33,6 +33,14 @@ public class Productos {
 		return pv;
 	}
 	
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public String toString() {
+		return " ";
+	}
+	
 	
 	
 
