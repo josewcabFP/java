@@ -7,8 +7,12 @@ public class Productos {
 	private String descripcion;
 	private String nombre;
 	
-	public Productos() {
-		
+	public Productos(int _can, Categoria _cat, double _cost, String _desc, String _nom ) {
+		this.cantidad = _can;
+		this.categoria = _cat;
+		this.coste = _cost;
+		this.descripcion = _desc;
+		this.nombre = _nom;
 	}
 
 	public int getCantidad() {
@@ -38,7 +42,7 @@ public class Productos {
 	}
 	
 	public String toString() {
-		return " ";
+		return this.getNombre() + " | " + this.getCoste() + " x " + this.getCantidad();
 	}
 	
 	

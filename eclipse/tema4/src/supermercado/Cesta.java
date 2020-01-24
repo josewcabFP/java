@@ -2,7 +2,7 @@ package supermercado;
 
 public class Cesta {
 	
-	private Nodo cima;
+	private NodoP cima;
 	
 	public Cesta() {
 		this.cima = null;
@@ -13,16 +13,32 @@ public class Cesta {
 	}
 	
 	public void push(Productos p) {
-		Nodo n = new Nodo(p);
+		NodoP n = new NodoP(p);
 		
 		if (this.isEmpty()) {
 			
 			this.cima = n;
 		}
 		else {
-			this.cima.setSiguiente(n);
+			n.setSiguiente(this.cima);
 			this.cima = n;
 		}
+	}
+	
+	public double costeCesta() {
+		double suma = 0;
+		
+		if (!isEmpty()) {
+			NodoP n = this.cima;
+			
+			while(n != null) {
+				suma += n.getProducto().getCoste() * n.getProducto().getCantidad();
+				n = n.getSiguiente();
+			}
+		}
+		
+		return suma;
+		
 	}
 	
 	public Productos pop() {
@@ -39,23 +55,38 @@ public class Cesta {
 		return p;
 	}
 	
-	// Nodo de productos
+	public String toString() {
+		String s = "";
+		
+		if (!isEmpty()) {
+			NodoP n = this.cima;
+			
+			while(n != null) {
+				s += n.getProducto().toString() + '\n';
+				n = n.getSiguiente();
+			}
+		}
+		
+		return s;
+	}
 	
-	private class Nodo {
+	// NodoP de productos
+	
+	private class NodoP {
 		
 		private Productos producto;
-		private Nodo siguiente;
+		private NodoP siguiente;
 		
-		public Nodo(Productos _prod) {
+		public NodoP(Productos _prod) {
 			this.producto = _prod;
 			this.siguiente = null;
 		}
 		
-		public void setSiguiente(Nodo n) {
+		public void setSiguiente(NodoP n) {
 			this.siguiente = n;
 		}
 		
-		public Nodo getSiguiente() {
+		public NodoP getSiguiente() {
 			return this.siguiente;
 		}
 		
@@ -64,6 +95,15 @@ public class Cesta {
 		}
 		
 		
+	}
+	
+	public static void main(String [] args) {
+		Cesta c = new Cesta();
+		
+		c.push(new Productos(1, Categoria.DROGUERIA, 1.90, "Jabon", "Palmolive"));
+		c.push(new Productos(1, Categoria.PESCADERIA, 3.10, "pescado", "Perca"));
+		
+		System.out.println(c);
 	}
 
 }
