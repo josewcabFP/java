@@ -66,6 +66,9 @@ public class Cesta {
 				n = n.getSiguiente();
 			}
 		}
+		else {
+			s += "No hay nada en la cesta\n";
+		}
 		
 		return s;
 	}

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"tresEnRaya","l":"Juego"},{"p":"tresEnRaya","l":"Main"},{"p":"tresEnRaya","l":"PanelJuego"},{"p":"tresEnRaya","l":"Posicion"},{"p":"tresEnRaya","l":"Tablero"}]

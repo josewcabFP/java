@@ -42,7 +42,7 @@ public class Cliente {
   	
 
 	public String toString() {
-		return  "El cliente con Id: " + this.getId() + ", tiene en la cesta: \n" + this.cesta.toString();
+		return  "El cliente con Id: " + this.getId() + ", tiene en la cesta: \n=========================================\n" + this.cesta.toString();
 	}
   	
   	public static void main(String [] args) {
@@ -50,9 +50,10 @@ public class Cliente {
   		Cliente c2 = new Cliente();
   		Cliente c3 = new Cliente();
   		c1.compra(new Productos(1, Categoria.DROGUERIA,	3.75, "shampoo", "Pantene"));
-  		c2.compra(new Productos(3, Categoria.CARNICERIA, 1.47, "Carne", "Chuletón"));
+  		c1.compra(new Productos(3, Categoria.CARNICERIA, 1.47, "Carne", "Chuletï¿½n"));
   		System.out.println(c1);
-  		System.out.println(c2 + " " + c2.getCosteCesta());
+  		System.out.println(c2);
+  		System.out.println(c3);
   		
   		
   	}
