@@ -59,6 +59,9 @@ public class Supermercado {
 
 			}
 		}
+		
+		System.out.println("=========================================\n|El supermercado ha ingresado " + this.total + "€ |\n"
+				+ 			"=========================================\n\n");
 	}
 
 	public Productos getProducto(int i) {
@@ -102,7 +105,7 @@ public class Supermercado {
 
 		do {
 			System.out.println("Bienvenido al gestor de supermercados\n-------------------------------------"
-					+ "\nPor favor elige una opción:\n" + "1. Comprar\n" + "2. Despachar\n" + "0. Salir");
+					+ "\nPor favor elige una opción:\n\n" + "1. Comprar\n" + "2. Despachar\n" + "0. Salir\n");
 
 			opc = sc.nextInt();
 
@@ -117,6 +120,8 @@ public class Supermercado {
 				break;
 			}
 		} while (opc != 0);
+		
+		
 
 	}
 
