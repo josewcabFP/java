@@ -1,5 +1,7 @@
 package supermercado;
 
+import java.util.Scanner;
+
 public class Supermercado {
 	
 	private Empleado [] empleados;
@@ -7,10 +9,14 @@ public class Supermercado {
 	private Productos [] productos;
 	private ColaClientes [] colas;
 	private double total;
+	private int ultCola;
+	private Scanner sc;
 	
 	public Supermercado() {
 		this.iniciaSupermercado();
 		this.total = 0;
+		this.ultCola = 0;
+		this.sc = new Scanner(System.in);
 	}	
 	
 	public double balance() {
@@ -18,25 +24,28 @@ public class Supermercado {
 	}
 	
 	public void clienteEnCola(Cliente c) {
-		int rand = (int)(Math.random() * this.colas.length);
-		this.colas[rand].add(c);
+		
+		if (this.ultCola >= this.colas.length) {
+			this.ultCola = 0;
+		}
+		this.colas[this.ultCola].add(c);
+		this.ultCola++;	
 	}
 	
 	public void compra() {
-		boolean finalizado = false;
-		int colasTerminadas;
+		Cliente c = new Cliente();
+		int p = -2;
 		
-		while(!finalizado) {
-			colasTerminadas = 0;
-			for (ColaClientes cola : this.colas) {
-				if(cola.isEmpty()) {
-					colasTerminadas++;
-				}
-			}
-			if (colasTerminadas == this.colas.length) {
-				finalizado = true;
+		while (p != -1) {
+			p = this.menuCompra();
+			if (p != -1) {
+			c.compra(this.productos[p]);
 			}
 		}
+		
+		this.clienteEnCola(c);
+		
+	
 	}
 	
 	public void despacha() {
@@ -69,12 +78,24 @@ public class Supermercado {
 	
 	public void verProductos() {
 		
-		System.out.println("\n--------->>> Lista de productos en stock <<<---------\n__________________________________________________________\n");
+		System.out.println("--------->>> Lista de productos en stock <<<---------\n__________________________________________________________\n");
 		for(int i = 0; i < this.productos.length; i++) {
-			System.out.println(this.productos[i]);
+			System.out.println( (i + 1) + ". " + this.productos[i]);
 		}
 		System.out.println("__________________________________________________________\n");
 		
+	}
+	
+	private int menuCompra() {
+		int opc;
+		
+		System.out.println("Elige el n�mero del producto para comprarlo (pulsa 0 para salir):\n");
+		this.verProductos();
+		System.out.println();
+		opc = sc.nextInt() - 1;
+		
+		
+		return opc;
 	}
 	
 
@@ -110,23 +131,7 @@ public class Supermercado {
 	
 	public static void main(String args []) {
 		Supermercado s = new Supermercado();
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		s.clienteEnCola(new Cliente());
-		
-		s.verColas();
-		s.despacha();
-		s.verColas();
-		s.despacha();
-		s.verColas();
-		s.despacha();
-		s.verColas();
+		s.compra();
 		
 		
 	}

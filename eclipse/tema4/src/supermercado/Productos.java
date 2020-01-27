@@ -42,7 +42,7 @@ public class Productos {
 	}
 	
 	public String toString() {
-		return "Nombre: " + this.getNombre() + " | Precio: " + this.getCoste() + "€ | Cantidad (pack): " + this.getCantidad();
+		return this.getNombre() + " | Precio: " + this.getCoste() + "€ | Cantidad (pack): " + this.getCantidad();
 	}
 	
 	
