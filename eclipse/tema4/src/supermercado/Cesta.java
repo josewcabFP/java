@@ -100,13 +100,6 @@ public class Cesta {
 		
 	}
 	
-	public static void main(String [] args) {
-		Cesta c = new Cesta();
-		
-		c.push(new Productos(1, Categoria.DROGUERIA, 1.90, "Jabon", "Palmolive"));
-		c.push(new Productos(1, Categoria.PESCADERIA, 3.10, "pescado", "Perca"));
-		
-		System.out.println(c);
-	}
+	
 
 }

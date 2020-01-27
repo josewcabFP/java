@@ -126,21 +126,5 @@ public class ColaClientes {
 		
 	}
 	
-	public static void main(String [] args) {
-		
-		ColaClientes cola = new ColaClientes(new Empleado(1, "juan"), new Caja(1));
-		Cliente c1 = new Cliente();
-  		Cliente c2 = new Cliente();
-  		Cliente c3 = new Cliente();
-  		
-  		c1.compra(new Productos(1, Categoria.DROGUERIA,	3.75, "shampoo", "Pantene"));
-  		c1.compra(new Productos(3, Categoria.CARNICERIA, 1.47, "Carne", "Chulet�n"));
-  		
-  		cola.add(c1);
-  		cola.add(c2);
-  		cola.add(c3);
-  		
-  		System.out.println(cola);
-		
-	}
+	
 }
