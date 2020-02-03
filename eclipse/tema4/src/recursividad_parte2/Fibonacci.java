@@ -17,7 +17,7 @@ public class Fibonacci {
 			fibonac = 0; 
 		}
 		else {
-			fibonac = n + fibo(n - 1); 
+			fibonac = fibo(n - 1) + fibo(n - 2); 
 		}
 		
 		return fibonac;
@@ -26,7 +26,7 @@ public class Fibonacci {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println(Fibonacci.fibo(2));
+		System.out.println(Fibonacci.fibo(3));
 
 	}
 

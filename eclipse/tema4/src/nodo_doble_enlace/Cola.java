@@ -1,4 +1,15 @@
-package pilaConNodos;
+package nodo_doble_enlace;
+
+/**
+ * Implementar una lista doblemente enlazada.
+ * 
+ * Modificar Nodo -> añadir el puntero a anterior, y los set/get.
+ * Modoficar Lista -> add(), get().
+ * Añadir Lista -> toStringReverse().
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ */
 
 public class Cola {
 
@@ -12,10 +23,11 @@ public class Cola {
 	
 	public void add (Integer i) {
 		Nodo entra= new Nodo(i);
+		
 		if (isEmpty()) {	
-			this.ini = entra; //Si es el primer elemento en entrar, es el fin e inicio de la cola
+			this.ini = entra;
 		} else {
-			fin.setSigueiente(entra);
+			fin.setSiguiente(entra);
 		}		
 		this.fin = entra;
 	}
