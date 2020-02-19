@@ -21,11 +21,12 @@ public class Conectar {
 			
 			//4.Recorrer el resultset
 			while(miResultSet.next()) {
-				System.out.println();
+				System.out.println(miResultSet.getString("descripcion"));
 			}
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println("No conecta!");
 			e.printStackTrace();
 		}
 	}
