@@ -19,7 +19,7 @@ public class Conexion_oracle {
             ResultSet miResultSet = miStatement.executeQuery("SELECT * FROM employees");
             
             while(miResultSet.next()) {
-				System.out.println(miResultSet.getString("ename"));
+				System.out.println(miResultSet.getObject("ename"));
 			}
             
         } catch (SQLException | ClassNotFoundException ex) {
