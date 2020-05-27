@@ -1,0 +1,6 @@
+1,DROGUERIA,3.10,Shampoo,Pantene"
+3,DROGUERIA,1.90,Jabon,Heno de Pravia"
+1,PANADERIA,0.40,Pan,Barra de pan
+1,GOLOSINAS,2.90,Bolsa de caramelos,Caramelos
+2,PESCADERIA,1.25,Pack de Atun,Atun
+1,FRUTERIA,0.30,Manzana,Manzana

@@ -1,0 +1,8 @@
+Manzanas
+2.24
+Peras
+3.12
+Zanahorias
+1.20
+Aguacate
+4.95

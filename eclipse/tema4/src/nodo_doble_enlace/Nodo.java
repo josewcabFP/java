@@ -1,5 +1,13 @@
 package nodo_doble_enlace;
 
+/**
+ * Nodo modificado con anterior y siguiente 
+ * 
+ * @author Jose Cabrera Rojas
+ *
+ *
+ */
+
 public class Nodo {
 	
 	private Integer valor;

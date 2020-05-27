@@ -27,6 +27,7 @@ public class Cola {
 		if (isEmpty()) {	
 			this.ini = entra;
 		} else {
+			entra.setAnterior(fin);
 			fin.setSiguiente(entra);
 		}		
 		this.fin = entra;
@@ -37,6 +38,7 @@ public class Cola {
 		if (!isEmpty()) {	
 			Integer sale = this.ini.getValor(); //Es el elemento inicial el que sale.
 			this.ini = this.ini.getSiguiente(); //Se recoge el elemento siguiente al primero, que luego pasará a ser la cabeza de cola
+			this.ini.setAnterior(null);
 			if (isEmpty()) {
 				this.fin = null; // Si solo quedaba un elemento, nos aseguramos que fin sea null.
 			}
@@ -74,6 +76,27 @@ public class Cola {
  
         }
  
+    }
+    
+    public String toStringReverse() {
+    	 if (isEmpty()) {
+             return "No hay nadie en cola.";
+         } else {
+  
+             String resultado = "";
+             Nodo puntero = fin;
+             resultado = puntero.toString();
+             puntero = puntero.getAnterior();
+             
+             while (puntero != null) {
+                 resultado +=  ", " +puntero ;
+                 puntero = puntero.getAnterior();
+             }
+  
+             return resultado;
+  
+         }
+  
     }
 	
 	
